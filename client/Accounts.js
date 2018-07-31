@@ -36,4 +36,3 @@ AccountsTemplates.addFields([
     required: true
   },
 ]);
-

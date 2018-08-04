@@ -15,6 +15,9 @@ Template.Post.helpers({
     	} else {
     		return true;
     	}
+    },
+    comentários: function() {
+    	return Comentários.find({post: this._id}).fetch();
     }
 });
 

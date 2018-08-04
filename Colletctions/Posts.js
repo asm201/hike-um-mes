@@ -16,5 +16,12 @@ Meteor.methods({
                 curtidas: Meteor.userId()
             }
         });
+    },
+    "descurtirPost": function(idDoPost) {
+        Posts.update(idDoPost, {
+           $pull: {
+                curtidas: Meteor.userId()  
+           } 
+        });
     }
 });

@@ -1,10 +1,10 @@
-Comentários = new Mongo.Collection("comentarios");
+Comentarios = new Mongo.Collection("comentarios");
 
 Meteor.methods({
-    "inserirComentário": function(textoDoComentário, idDoPost) {
+    "inserirComentario": function(textoDoComentario, idDoPost) {
         if(Meteor.userId() !== null) {
-            Comentários.insert({
-                texto: textoDoComentário,
+            Comentarios.insert({
+                texto: textoDoComentario,
                 post: idDoPost,
                 autor: Meteor.userId()
             });

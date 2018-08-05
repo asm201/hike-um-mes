@@ -1,4 +1,4 @@
-Template.NovoComentário.events({
+Template.NovoComentario.events({
     "submit form": function(evento, template) {
         evento.preventDefault();
         var texto = evento.target.texto.value;

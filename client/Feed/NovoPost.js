@@ -1,11 +1,15 @@
-Template.NovoPost.onCreated(function(){
+Template.NovoPost.onCreated(function() {
     this.urlDaImagem = new ReactiveVar();
 });
+
 Template.NovoPost.events({
     "submit form": function(evento, template) {
         evento.preventDefault();
         var PostTexto = evento.target.texto.value;
         var urlDaImagem = template.urlDaImagem.get();
+
+        console.log(PostTexto);
+        console.log(urlDaImagem);
 
         Meteor.call("inserirPost", PostTexto, urlDaImagem);
 

@@ -5,6 +5,8 @@
         {{#with perfil}}
           <h1>{{username}}</h1>
           <h4>{{profile.name}}</h4>
+          <p>{{profile.seguidores.length}} seguidores</p>
+          <p>{{profile.seguindo.length}} seguindo</p>
         {{/with}}
         {{#if euMesmo}}
           <p>Bem-vindo!</p>

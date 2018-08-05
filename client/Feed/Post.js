@@ -30,7 +30,7 @@ Template.Post.events({
         Meteor.call("curtirPost", template.data._id);
     },
     "click .botao-descurtir": function(evento, template) {
-        Meteor.call("descurtirPost", template.data._id);
+        Meteor.call("descurtirPost", template.data._id);     
     },
     "click .botao-remover": function(evento, template) {
         Meteor.call("removerPost", template.data._id);

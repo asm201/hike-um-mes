@@ -26,11 +26,11 @@ Meteor.methods({
         });
     },
     "removerPost": function(idDoPost) {
-       var posts = Posts.findOne({_id:idDoPost});
-       var idDoAutor = post.idDoAutor;
-       if (idDoAutor === Meteor.userId()) {
-        Posts.remove(idDoPost);
-       }
+        var post = Posts.findOne({_id: idDoPost});
+        var idDoAutor = post.idDoAutor;
 
+        if(idDoAutor === Meteor.userId()) {
+            Posts.remove(idDoPost);
+        }
     }
 });

@@ -1,8 +1,12 @@
-Meteor.subscribe("posts");
+Template.Feed.onCreated(function() {
+    Meteor.subscribe("posts");
+});
+
+Meteor.subscribe("usuarios");
 
 Template.Feed.helpers({
     posts: function() {
-        var CollectionPosts = Posts.find().fetch().reverse();
-        return CollectionPosts;
+        var postsDaCollection = Posts.find().fetch().reverse();
+        return postsDaCollection;
     }
 });

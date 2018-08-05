@@ -4,7 +4,7 @@ Template.NovoComentario.events({
         var texto = evento.target.texto.value;
         var idDoPost = template.data._id;
 
-        Meteor.call("inserirComentário", texto, idDoPost);
+        Meteor.call("inserirComentario", texto, idDoPost);
 
         evento.target.texto.value = "";
     }

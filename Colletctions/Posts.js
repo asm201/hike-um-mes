@@ -1,10 +1,10 @@
 Posts = new Mongo.Collection("posts");
 
 Meteor.methods({
-    "inserirPost": function(PostTexto, urlDaImagem) {
-        if(Meteor.userId() !== null && PostTexto) {
+    "inserirPost": function(textoDoFormulario, urlDaImagem) {
+        if(Meteor.userId() !== null && textoDoFormulario) {
             Posts.insert({
-                texto: PostTexto,
+                texto: textoDoFormulario,
                 idDoAutor: Meteor.userId(),
                 curtidas: [],
                 imagem: urlDaImagem

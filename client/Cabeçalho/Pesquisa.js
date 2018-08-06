@@ -9,6 +9,6 @@ Template.Pesquisa.helpers({
     });
   },
   selected: function(event, suggestion, datasetName) {
-    FlowRouter.go("/perfil/" + suggestion.id);
+    FlowRouter.go("/perfis/" + suggestion.id);
   }
 });

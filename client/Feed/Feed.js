@@ -1,3 +1,4 @@
+
 Template.Feed.onCreated(function() {
     Meteor.subscribe("posts");
 });

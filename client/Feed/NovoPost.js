@@ -5,13 +5,13 @@ Template.NovoPost.onCreated(function() {
 Template.NovoPost.events({
     "submit form": function(evento, template) {
         evento.preventDefault();
-        var PostTexto = evento.target.texto.value;
+        var textoDoFormulario = evento.target.texto.value;
         var urlDaImagem = template.urlDaImagem.get();
 
-        console.log(PostTexto);
+        console.log(textoDoFormulario);
         console.log(urlDaImagem);
-
-        Meteor.call("inserirPost", PostTexto, urlDaImagem);
+        
+        Meteor.call("inserirPost", textoDoFormulario, urlDaImagem);
 
         evento.target.texto.value = "";
     },
